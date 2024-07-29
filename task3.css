@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        background: linear-gradient(45deg, 
+            red, orange, yellow, green, blue, indigo, violet, red
+        );
+        background-size: 400% 400%;
+        animation: rainbow 10s ease infinite; 
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+#question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.outer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007BFF;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.question-box {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color:rgb(240, 214, 218);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Space between question box and input field */
+    overflow: hidden; /* Prevent overflow */
+}
+
+input {
+    width: calc(100% - 40px); /* Adjust width to fit within the inner box */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Existing CSS remains unchanged */
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: greenyellow;
+}
+
+
+.outer-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #3ae0c5;
+}
+
+.question-box {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#score-container {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.final-score-outerbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color:blue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+/* CSS for the final score box */
+.final-score {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color:rgb(240, 214, 218);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: red;
+    box-sizing: border-box;
+}

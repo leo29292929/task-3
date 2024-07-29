@@ -1,0 +1,141 @@
+{
+    "easy_questions": [
+      {
+         "question": "question1easy",
+      "description": "Predict regex order of the vowels",
+      "regex": "aeiou|eioua|iouae",
+      "example_matches": ["aeiou", "eioua", "iouae"],
+      "non_matches": ["aeiouu", "uoiea", "aoiue"]
+      },
+     
+      {
+        "question": "question2easy",
+        "description": "Enter a valid regex date format",
+        "regex": "\\b(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\\d{4}\\b|\\b\\d{1,2} [A-Za-z]+ \\d{4}\\b|\\b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}\\b|\\b(0[1-9]|[12][0-9]|3[01])\\.(0[1-9]|1[0-2])\\.\\d{4}\\b",
+        "example_matches": ["01-01-2020", "15-08-1995", "31-12-1999", "02 July 2024", "15 August 1995", "02/02/2024", "02.02.2020"],
+        "non_matches": ["32-01-2020", "01-13-2020", "2020-01-01", "2July2024", "32 July 2024"]
+      }
+      ,
+      {
+        "question": "question3easy",
+        "description": "Enter a valid regex manufacturing license code.",
+        "regex": "^\\d{14}$",
+        "example_matches": ["12345678901234", "98765432109876"],
+        "non_matches": ["1234567890123", "123456789012345", "1234567890123a", "123456789012@4"]
+    }
+    ,
+      {
+        
+        
+          "question": "question4easy",
+          "description": "Enter a valid regex to capture a sequence of three equally long words (Guess the word size ).",
+          "regex": "^\\b[a-zA-Z]{4}\\b(?:\\s+[a-zA-Z]{4}\\b){2}$",
+          "example_matches": ["word text book", "this test code", "more than four"],
+          "non_matches": ["1244 kjfd 9%$#", "3233 4355 4434", "word longertext example"]
+      }
+      ,{
+        "question": "question5easy",
+        "description": "Enter a valid regex regular sentence",
+        "regex": "^[A-Z].*\\.$",
+        "example_matches": ["Hello world.", "This is a test.", "Regex is fun."],
+        "non_matches": ["hello world.", "This is a test", "regex is fun"]
+      }
+    
+    ],
+
+
+    "medium_questions": [
+      {
+        "question": "question1medium",
+        "description":"Enter a valid regex to find a string of characters where the length is five or more, but none of the characters are from the subset of letters typically used to represent vowel sounds",
+        "regex": "\\b[^aeiouAEIOU]{5,}\\b",
+        "example_matches": ["rhythm", "crypt", "gypsy"],
+        "non_matches": ["hello", "world", "apple"]
+      },
+      {
+        "question": "question2medium",
+        "description": "Enter a valid regex username (10 character only)",
+        "regex": "^(?=.*\\d)(?=.*[^\\w\\d\\s])[A-Za-z\\d\\W_]{10}$",
+        "example_matches": ["user1@name", "a1!b2@c3d4"],
+        "non_matches": ["username", "user1234567", "short@1"]
+      }
+      ,
+      {
+        "question": "question3medium",
+        "description": "Enter a valid regex pattern for an Indian car number plate",
+        "regex": "^[A-Z]{2}\\d{2}[- ]?[A-Z]{1,2}[- ]?\\d{4}$|^[A-Z]{2} \\d{2} [A-Z] \\d{4}$|^[A-Z]{2}\\d{2}[A-Z]{1,2}\\d{4}$",
+        "example_matches": ["MH12-AB-1234", "WB 06 F 5977", "MH12AB1234"],
+        "non_matches": ["123-AB-4567", "ABCDE-12345", "MH-1234-AB", "DL12345678", "KA03-AB12345"]
+      }
+           
+            ,
+            {
+              "question": "question4medium",
+              "description": "Enter a valid regex pattern for matching a URL.",
+              "regex": "^(https?:\\/\\/www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/.*)?|https?:\\/\\/[^\\s/$.?#].[^\\s]*|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/.*)?|[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}(\\/.*)?)$",
+              "example_matches": [
+                  "http://www.example.com",
+                  "https://www.example.com",
+                  "http://example.com/path/to/resource",
+                  "https://example.com",
+                  "www.example.com",
+                  "www.example.com/path"
+              ],
+              "non_matches": [
+                  "ftp://example.com",
+                  "example",
+                  "http://example",
+                  "example..com",
+                  "http://.com"
+              ]
+              
+          }
+          ,
+          {
+            "question": "question5medium",
+            "description": "Enter a valid regex time format",
+            "regex": "\\b((0?[1-9]|1[0-2]):[0-5][0-9](?::[0-5][0-9])?\\s?(am|pm)?|(0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9](?::[0-5][0-9])?\\s?(AM|PM)?)\\b",
+            "example_matches": ["13:45", "09:00", "23:59", "15:30:45", "12:30 pm", "01:15 am", "09:45 pm", "02:30:15 am", "13:00 pm"],
+            "non_matches": ["24:00", "13:60", "9:99", "12:30:60"]
+          }     
+    ],
+
+
+    "difficult_questions": [
+      
+      {
+        "question": "question1difficult",
+        "description": "Enter a valid regex password.(10 character only)",
+        "regex": "^(?=(?:[^0-9]*\\d){0,2})(?=(?:[^@!%*?&]*[@$!%*?&]){0,2})(?=[A-Za-z0-9@$!%*?&]{10}$)[A-Za-z0-9@$!%*?&]{10}$",
+        "example_matches": [
+          "Str0ngP@ss",
+          "P@ssw0rd12",
+          "A1b2C3d4!@"
+        ],
+        "non_matches": [
+          "weakpassword",
+          "12345678",
+          "Password!"
+        ]
+      }
+      ,
+      {
+        "question": "question2difficult",
+        "description": "Enter a regex to find a word that contains the same letter at the start and the end",
+        "regex": "\\b([A-Za-z]).*\\1\\b",
+        "example_matches": ["Anna", "madam", "racecar"],
+        "non_matches": ["hello", "world", "apple"]
+      },
+      {
+        "question": "question3difficult",
+        "description": "Enter a regex to find a number string where the same digit repeats exactly three times consecutively.",
+        "regex": "(\\d)\\1{2}",
+        "example_matches": ["111", "2223", "444567"],
+        "non_matches": ["123", "11234", "5678"]
+    }
+    
+      
+    
+    ]
+  }
+  
