@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create score display
         const scoreDisplay = document.createElement('div');
         scoreDisplay.className = 'score-display';
-        // scoreDisplay.textContent = `Score: ${correctAnswersCount}`;
+        scoreDisplay.textContent = `Score: ${correctAnswersCount}`;
 
         // Create question box
         const questionBox = document.createElement('div');
